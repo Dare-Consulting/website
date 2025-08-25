@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Retry Logic - DARE Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .test-button:hover {
+            background: #c0392b;
+        }
+        .test-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .log-output {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        .log-line {
+            margin: 2px 0;
+            padding: 2px 0;
+        }
+        .log-success { color: #2ecc71; }
+        .log-error { color: #e74c3c; }
+        .log-warning { color: #f39c12; }
+        .log-info { color: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Email Retry Logic Test Suite</h1>
+    
+    <div class="test-section">
+        <h2>Test Scenarios</h2>
+        <p>Click on each button to test different retry scenarios:</p>
+        
+        <button class="test-button" onclick="testSuccessfulSend()">✅ Test Successful Send</button>
+        <button class="test-button" onclick="testServerError()">🔄 Test Server Error (500) - Should Retry</button>
+        <button class="test-button" onclick="testClientError()">❌ Test Client Error (400) - No Retry</button>
+        <button class="test-button" onclick="testNetworkError()">📡 Test Network Error - Should Retry</button>
+        <button class="test-button" onclick="testTimeout()">⏱️ Test Timeout - Should Retry</button>
+        <button class="test-button" onclick="clearLog()">🗑️ Clear Log</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Contact Form Test</h2>
+        <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone">
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="discover">Discover</option>
+                <option value="actualize">Actualize</option>
+                <option value="relate">Relate</option>
+                <option value="excel">Excel</option>
+            </select>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <div class="test-section">
+        <h2>Console Log</h2>
+        <div id="logOutput" class="log-output"></div>
+    </div>
+
+    <script>
+        // Mock API URL for testing
+        let mockAPIBehavior = 'success';
+        let attemptCount = 0;
+        
+        // Override console.log to display in our log output
+        const logOutput = document.getElementById('logOutput');
+        const originalLog = console.log;
+        const originalError = console.error;
+        
+        function addLog(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logLine = document.createElement('div');
+            logLine.className = `log-line log-${type}`;
+            logLine.textContent = `[${timestamp}] ${message}`;
+            logOutput.appendChild(logLine);
+            logOutput.scrollTop = logOutput.scrollHeight;
+            
+            // Also log to real console
+            if (type === 'error') {
+                originalError(message);
+            } else {
+                originalLog(message);
+            }
+        }
+        
+        console.log = (message, ...args) => {
+            addLog(message + (args.length ? ' ' + args.join(' ') : ''), 'info');
+        };
+        
+        console.error = (message, ...args) => {
+            addLog(message + (args.length ? ' ' + args.join(' ') : ''), 'error');
+        };
+        
+        // Override fetch for testing
+        const originalFetch = window.fetch;
+        window.fetch = async function(url, options) {
+            attemptCount++;
+            addLog(`Attempt ${attemptCount}: Sending request to ${url}`, 'info');
+            
+            // Simulate delay
+            await new Promise(resolve => setTimeout(resolve, 500));
+            
+            switch(mockAPIBehavior) {
+                case 'success':
+                    addLog(`✅ Response: 200 OK`, 'success');
+                    return {
+                        ok: true,
+                        status: 200,
+                        json: async () => ({ success: true, message: 'Email sent successfully', id: 'test_123' })
+                    };
+                    
+                case 'serverError':
+                    if (attemptCount <= 2) {
+                        addLog(`🔄 Response: 500 Server Error - Will retry`, 'warning');
+                        return {
+                            ok: false,
+                            status: 500,
+                            json: async () => ({ error: 'Internal server error' })
+                        };
+                    } else {
+                        addLog(`✅ Response: 200 OK (after ${attemptCount} attempts)`, 'success');
+                        return {
+                            ok: true,
+                            status: 200,
+                            json: async () => ({ success: true, message: 'Email sent successfully after retries', id: 'test_456' })
+                        };
+                    }
+                    
+                case 'clientError':
+                    addLog(`❌ Response: 400 Bad Request - No retry`, 'error');
+                    return {
+                        ok: false,
+                        status: 400,
+                        json: async () => ({ error: 'Invalid email format' })
+                    };
+                    
+                case 'networkError':
+                    if (attemptCount <= 2) {
+                        addLog(`📡 Network error - Will retry`, 'warning');
+                        throw new Error('Network error: Failed to fetch');
+                    } else {
+                        addLog(`✅ Response: 200 OK (after ${attemptCount} attempts)`, 'success');
+                        return {
+                            ok: true,
+                            status: 200,
+                            json: async () => ({ success: true, message: 'Email sent successfully after network recovery', id: 'test_789' })
+                        };
+                    }
+                    
+                case 'timeout':
+                    if (attemptCount <= 1) {
+                        addLog(`⏱️ Request timeout - Will retry`, 'warning');
+                        // Simulate AbortError for timeout
+                        const error = new Error('The operation was aborted');
+                        error.name = 'AbortError';
+                        throw error;
+                    } else {
+                        addLog(`✅ Response: 200 OK (after ${attemptCount} attempts)`, 'success');
+                        return {
+                            ok: true,
+                            status: 200,
+                            json: async () => ({ success: true, message: 'Email sent successfully after timeout retry', id: 'test_timeout' })
+                        };
+                    }
+                    
+                default:
+                    return originalFetch(url, options);
+            }
+        };
+        
+        function testSuccessfulSend() {
+            mockAPIBehavior = 'success';
+            attemptCount = 0;
+            addLog('--- Testing Successful Send ---', 'info');
+            document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+        }
+        
+        function testServerError() {
+            mockAPIBehavior = 'serverError';
+            attemptCount = 0;
+            addLog('--- Testing Server Error (500) with Retry ---', 'info');
+            document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+        }
+        
+        function testClientError() {
+            mockAPIBehavior = 'clientError';
+            attemptCount = 0;
+            addLog('--- Testing Client Error (400) without Retry ---', 'info');
+            document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+        }
+        
+        function testNetworkError() {
+            mockAPIBehavior = 'networkError';
+            attemptCount = 0;
+            addLog('--- Testing Network Error with Retry ---', 'info');
+            document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+        }
+        
+        function testTimeout() {
+            mockAPIBehavior = 'timeout';
+            attemptCount = 0;
+            addLog('--- Testing Timeout with Retry ---', 'info');
+            document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+        }
+        
+        function clearLog() {
+            logOutput.innerHTML = '';
+            addLog('Log cleared', 'info');
+        }
+        
+        // Set default test values
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('[name="name"]').value = 'Test User';
+            document.querySelector('[name="email"]').value = 'test@example.com';
+            document.querySelector('[name="phone"]').value = '123-456-7890';
+            document.querySelector('[name="service"]').value = 'discover';
+            document.querySelector('[name="message"]').value = 'This is a test message for retry logic verification.';
+            
+            addLog('Test suite ready! Click buttons to test different scenarios.', 'success');
+        });
+    </script>
+    
+    <!-- Include the main script with retry logic -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -888,3 +888,39 @@ a.logo:hover {
         font-size: 2rem;
     }
 }
+
+/* Notification System */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 10000;
+    animation: slideIn 0.3s ease;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.notification-success {
+    background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+    color: white;
+}
+
+.notification-error {
+    background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+    color: white;
+}
+
+.notification-warning {
+    background: linear-gradient(135deg, #faad14 0%, #ffc53d 100%);
+    color: white;
+}
+
+.notification-info {
+    background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+    color: white;
+}

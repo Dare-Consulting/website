@@ -102,6 +102,88 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Retry configuration
+const RETRY_CONFIG = {
+    maxRetries: 3,
+    baseDelay: 1000, // Start with 1 second
+    maxDelay: 8000,  // Max 8 seconds between retries
+    backoffMultiplier: 2
+};
+
+// Exponential backoff with retry logic
+async function sendEmailWithRetry(data, retryCount = 0) {
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            // Add timeout to prevent hanging requests
+            signal: AbortSignal.timeout(30000) // 30 second timeout
+        });
+        
+        // Check if response is ok (status 200-299)
+        if (!response.ok) {
+            // For server errors (500+), we should retry
+            if (response.status >= 500 && retryCount < RETRY_CONFIG.maxRetries) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+            // For client errors (400-499), don't retry
+            const errorData = await response.json().catch(() => ({}));
+            return { 
+                success: false, 
+                error: errorData.error || `Request failed with status ${response.status}`,
+                shouldRetry: false 
+            };
+        }
+        
+        const result = await response.json();
+        return result;
+        
+    } catch (error) {
+        // Network errors, timeouts, and server errors (500+) should be retried
+        if (retryCount < RETRY_CONFIG.maxRetries) {
+            const delay = Math.min(
+                RETRY_CONFIG.baseDelay * Math.pow(RETRY_CONFIG.backoffMultiplier, retryCount),
+                RETRY_CONFIG.maxDelay
+            );
+            
+            console.log(`Retry attempt ${retryCount + 1}/${RETRY_CONFIG.maxRetries} after ${delay}ms`);
+            
+            // Show retry notification to user
+            showNotification(
+                `Connection issue. Retrying... (Attempt ${retryCount + 2}/${RETRY_CONFIG.maxRetries + 1})`, 
+                'warning'
+            );
+            
+            // Track retry attempt
+            trackEvent('form_submit_retry', {
+                form_name: 'contact_form',
+                retry_attempt: retryCount + 1,
+                delay_ms: delay,
+                error_type: error.name || 'NetworkError'
+            });
+            
+            // Wait before retrying
+            await new Promise(resolve => setTimeout(resolve, delay));
+            
+            // Recursive retry
+            return sendEmailWithRetry(data, retryCount + 1);
+        }
+        
+        // Max retries exceeded
+        console.error('Max retries exceeded:', error);
+        trackEvent('form_submit_max_retries_exceeded', {
+            form_name: 'contact_form',
+            total_attempts: RETRY_CONFIG.maxRetries + 1,
+            final_error: error.message
+        });
+        
+        throw error;
+    }
+}
+
 // Form Submission
 const contactForm = document.getElementById('contactForm');
 
@@ -136,31 +218,31 @@ contactForm.addEventListener('submit', async function(e) {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.innerHTML;
     
-    // Add loading spinner to button
-    submitButton.innerHTML = `
-        <span style="display: inline-flex; align-items: center; gap: 8px;">
-            <svg class="spinner" style="animation: spin 1s linear infinite;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12a9 9 0 11-6.219-8.56"/>
-            </svg>
-            Sending...
-        </span>
-    `;
+    // Update button with loading state
+    const updateButtonState = (text, showSpinner = true) => {
+        if (showSpinner) {
+            submitButton.innerHTML = `
+                <span style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg class="spinner" style="animation: spin 1s linear infinite;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12a9 9 0 11-6.219-8.56"/>
+                    </svg>
+                    ${text}
+                </span>
+            `;
+        } else {
+            submitButton.innerHTML = text;
+        }
+    };
+    
+    updateButtonState('Sending...');
     submitButton.disabled = true;
     
     // Show info notification
     showNotification('Sending your message...', 'info');
     
     try {
-        // Send data to backend API
-        const response = await fetch(API_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
-        
-        const result = await response.json();
+        // Send data to backend API with retry logic
+        const result = await sendEmailWithRetry(data);
         
         if (result.success) {
             showNotification('Thank you for your message! We will contact you soon.', 'success');
@@ -178,22 +260,41 @@ contactForm.addEventListener('submit', async function(e) {
                 service_interest: data.service || 'not_specified'
             });
         } else {
-            showNotification('Failed to send message. Please try again or contact us directly.', 'error');
+            // Check if it was a client error (no retry) or server error (retried but failed)
+            const errorMessage = result.shouldRetry === false 
+                ? 'Failed to send message. Please check your information and try again.'
+                : 'Failed to send message after multiple attempts. Please try again later or contact us directly.';
+            
+            showNotification(errorMessage, 'error');
             
             // Track form submission failure
             trackEvent('form_submit_error', {
                 form_name: 'contact_form',
-                error_type: 'api_error'
+                error_type: result.shouldRetry === false ? 'client_error' : 'server_error',
+                error_message: result.error
             });
         }
     } catch (error) {
-        console.error('Error sending form:', error);
-        showNotification('An error occurred. Please try again later.', 'error');
+        console.error('Error sending form after retries:', error);
+        
+        // Provide helpful error message based on error type
+        let errorMessage = 'An error occurred. Please try again later.';
+        if (error.name === 'AbortError') {
+            errorMessage = 'Request timed out. Please check your connection and try again.';
+        } else if (!navigator.onLine) {
+            errorMessage = 'No internet connection. Please check your connection and try again.';
+        } else {
+            errorMessage = 'Unable to send message after multiple attempts. Please contact us directly at coach@dareconsulting.group';
+        }
+        
+        showNotification(errorMessage, 'error');
         
         // Track form submission exception
         trackEvent('form_submit_exception', {
             form_name: 'contact_form',
-            error_message: error.message
+            error_message: error.message,
+            error_type: error.name || 'UnknownError',
+            is_online: navigator.onLine
         });
     } finally {
         // Restore button state
@@ -218,6 +319,8 @@ function showNotification(message, type = 'info') {
         ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'
         : type === 'error'
         ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>'
+        : type === 'warning'
+        ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>'
         : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
     
     notification.innerHTML = `
