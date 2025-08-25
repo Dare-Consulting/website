@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform vision into reality with strategic planning workshops and personal development programs in the Philippines. DARE Consulting's Actualize service helps organizations in Manila, Makati, and BGC achieve breakthrough results through goal alignment and execution excellence.">
+    <meta name="keywords" content="strategic planning Philippines, visioning workshop Manila, personal development training, goal setting workshop, strategic alignment BGC, execution planning, organizational transformation Philippines, change management Southeast Asia">
+    <title>Actualize - Strategic Planning & Visioning Philippines | DARE Consulting</title>
+    <link rel="canonical" href="https://www.dareconsulting.group/actualize.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dareconsulting.group/actualize.html">
+    <meta property="og:title" content="Actualize - Strategic Planning & Visioning Philippines | DARE Consulting">
+    <meta property="og:description" content="Transform your organization's vision into reality through strategic planning and personal development programs. Expert facilitation for teams in the Philippines.">
+    <meta property="og:image" content="https://www.dareconsulting.group/images/actualize-og.jpg">
+    <meta property="og:site_name" content="DARE Management Consultancy Services">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dareconsulting.group/actualize.html">
+    <meta property="twitter:title" content="Actualize - Strategic Planning Philippines | DARE Consulting">
+    <meta property="twitter:description" content="Strategic planning and visioning workshops for Philippine organizations. Transform vision into actionable results.">
+    <meta property="twitter:image" content="https://www.dareconsulting.group/images/actualize-twitter.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.9), rgba(241, 196, 15, 0.9)), 
+                        url('https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=1920&h=600&fit=crop&fp-y=0.35&auto=format&q=75');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .service-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-orange);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            color: var(--primary-orange);
+        }
+        
+        .framework-section {
+            background: var(--light-gray);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+        
+        .framework-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .framework-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .framework-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-yellow));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .check-icon {
+            color: var(--primary-orange);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-yellow) 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            max-width: 700px;
+            margin: 3rem auto;
+            position: relative;
+        }
+        
+        .testimonial-box::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-orange);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Actualize - Strategic Planning & Visioning",
+        "provider": {
+            "@type": "Organization",
+            "name": "DARE Management Consultancy Services",
+            "url": "https://www.dareconsulting.group",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "PH",
+                "addressRegion": "Metro Manila"
+            }
+        },
+        "description": "Strategic planning and visioning workshops to transform organizational vision into reality through goal alignment and execution excellence.",
+        "areaServed": ["Philippines", "Manila", "Makati", "BGC", "Taguig", "Cebu", "Davao", "Southeast Asia"],
+        "serviceType": "Strategic Planning and Organizational Development",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Actualize Services",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Visioning & Strategic Planning Workshops",
+                    "description": "Facilitate organizational vision and strategy development"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Personal Development Programs",
+                    "description": "Individual growth and leadership development initiatives"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Goal Alignment & Execution",
+                    "description": "Align organizational goals with actionable execution plans"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Change Management",
+                    "description": "Guide organizations through transformation initiatives"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- PostHog Analytics -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_9ky4zAZoQtZ5pxA3z6Dy1qpzSfwqprCi37GhxrbzDBv',{api_host:'https://app.posthog.com', person_profiles: 'identified_only'})
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Actualize</h1>
+            <p>Transform Vision into Reality Through Strategic Excellence</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Turn Your Vision into Actionable Success</h2>
+                <p>
+                    Our Actualize program bridges the gap between aspiration and achievement. We guide organizations through comprehensive strategic planning and personal development initiatives that transform ambitious visions into tangible results, ensuring every team member is aligned and empowered to contribute to your success.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        Visioning Workshops
+                    </h3>
+                    <p>Collaborative sessions that help organizations define their future state, create compelling visions, and establish clear direction for growth.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                        Strategic Planning
+                    </h3>
+                    <p>Comprehensive strategic planning processes that align organizational goals with actionable initiatives and measurable outcomes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                        Personal Development
+                    </h3>
+                    <p>Individual growth programs that enhance skills, build confidence, and align personal goals with organizational objectives.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 16 12 13 15 10 15 7 12 2 12"></polyline>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                        </svg>
+                        Goal Alignment
+                    </h3>
+                    <p>Ensure all levels of your organization are working toward common objectives with clear accountability and progress tracking.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                        Implementation Roadmaps
+                    </h3>
+                    <p>Detailed action plans with timelines, milestones, and resource allocation to ensure successful strategy execution.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        Progress Monitoring
+                    </h3>
+                    <p>Continuous tracking and adjustment of strategic initiatives to ensure goals are met and value is delivered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section class="framework-section">
+        <div class="container">
+            <h2 class="section-title">Our Strategic Planning Framework</h2>
+            <p class="section-subtitle">A proven approach to turning vision into reality</p>
+            
+            <div class="framework-grid">
+                <div class="framework-item">
+                    <div class="framework-number">1</div>
+                    <h3>Vision Creation</h3>
+                    <p>Define your aspirational future state and core purpose</p>
+                </div>
+                
+                <div class="framework-item">
+                    <div class="framework-number">2</div>
+                    <h3>Current State Analysis</h3>
+                    <p>Assess strengths, weaknesses, opportunities, and threats</p>
+                </div>
+                
+                <div class="framework-item">
+                    <div class="framework-number">3</div>
+                    <h3>Strategy Development</h3>
+                    <p>Create strategic priorities and initiatives</p>
+                </div>
+                
+                <div class="framework-item">
+                    <div class="framework-number">4</div>
+                    <h3>Action Planning</h3>
+                    <p>Develop detailed implementation plans</p>
+                </div>
+                
+                <div class="framework-item">
+                    <div class="framework-number">5</div>
+                    <h3>Execution Support</h3>
+                    <p>Provide ongoing guidance and resources</p>
+                </div>
+                
+                <div class="framework-item">
+                    <div class="framework-number">6</div>
+                    <h3>Performance Review</h3>
+                    <p>Monitor progress and adjust strategies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Development Section -->
+    <section class="service-content">
+        <div class="container">
+            <h2 class="section-title">Personal Development Programs</h2>
+            
+            <div class="testimonial-box">
+                <p class="testimonial-text">
+                    "The Actualize program transformed not just our strategic planning but our entire organizational mindset. We went from having vague aspirations to clear, actionable goals with every team member understanding their role in our success."
+                </p>
+                <p class="testimonial-author">- Regional Director, Technology Company</p>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--dark-gray);">Our Personal Development Focus Areas:</h3>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Time management and productivity enhancement</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Emotional intelligence and self-awareness</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Goal setting and achievement strategies</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Problem-solving and critical thinking</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Stress management and resilience building</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Career planning and professional growth</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Actualize Your Vision?</h2>
+            <p>Let's transform your aspirations into achievements</p>
+            <a href="index.html#contact" class="btn btn-primary btn-large">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Transform your vision into reality with our strategic planning and personal development programs. Let's create a roadmap for your organization's success.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>coach@dareconsulting.group</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Philippines (Primary) | Global Reach</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dareconsult/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="discover">Discover - Assessments & Training</option>
+                                <option value="actualize" selected>Actualize - Strategic Planning</option>
+                                <option value="relate">Relate - Team Building</option>
+                                <option value="excel">Excel - Coaching & Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Get in Touch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 DARE Management Consultancy Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive leadership assessments and personality profiling services in the Philippines. DARE Consulting's Discover program identifies strengths, develops talent, and maximizes team performance through data-driven insights. Serving Manila, Makati, BGC, and Southeast Asia.">
+    <meta name="keywords" content="leadership assessment Philippines, personality profiling Manila, 360 degree feedback, strengths analysis, team assessment, executive assessment, talent development Philippines, organizational assessment Southeast Asia">
+    <title>Discover - Leadership Assessment & Training Philippines | DARE Consulting</title>
+    <link rel="canonical" href="https://www.dareconsulting.group/discover.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dareconsulting.group/discover.html">
+    <meta property="og:title" content="Discover - Leadership Assessment & Training Philippines | DARE Consulting">
+    <meta property="og:description" content="Unlock your organization's potential with comprehensive leadership assessments and personality profiling. Data-driven insights for teams in the Philippines and Southeast Asia.">
+    <meta property="og:image" content="https://www.dareconsulting.group/images/discover-og.jpg">
+    <meta property="og:site_name" content="DARE Management Consultancy Services">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dareconsulting.group/discover.html">
+    <meta property="twitter:title" content="Discover - Leadership Assessment Philippines | DARE Consulting">
+    <meta property="twitter:description" content="Comprehensive leadership assessments and personality profiling for organizations in the Philippines. Transform your team with data-driven insights.">
+    <meta property="twitter:image" content="https://www.dareconsulting.group/images/discover-twitter.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.9), rgba(243, 156, 18, 0.9)), 
+                        url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&h=600&fit=crop&fp-y=0.4&auto=format&q=75');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .service-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-red);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            color: var(--primary-red);
+        }
+        
+        .process-section {
+            background: var(--light-gray);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .process-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: var(--primary-orange);
+            opacity: 0.3;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-red);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .check-icon {
+            color: var(--primary-orange);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Discover - Leadership Assessment & Training",
+        "provider": {
+            "@type": "Organization",
+            "name": "DARE Management Consultancy Services",
+            "url": "https://www.dareconsulting.group",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "PH",
+                "addressRegion": "Metro Manila"
+            }
+        },
+        "description": "Comprehensive leadership assessments and personality profiling services to unlock organizational potential through data-driven insights.",
+        "areaServed": ["Philippines", "Manila", "Makati", "BGC", "Taguig", "Quezon City", "Southeast Asia"],
+        "serviceType": "Leadership Assessment and Training",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Discover Services",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Leadership Assessments",
+                    "description": "Comprehensive evaluation of leadership competencies"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Personality Profiling",
+                    "description": "In-depth personality assessments using validated tools"
+                },
+                {
+                    "@type": "Service",
+                    "name": "360-Degree Feedback",
+                    "description": "Multi-source feedback systems for comprehensive insights"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Strengths Analysis",
+                    "description": "Identify individual and team strengths"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- PostHog Analytics -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_9ky4zAZoQtZ5pxA3z6Dy1qpzSfwqprCi37GhxrbzDBv',{api_host:'https://app.posthog.com', person_profiles: 'identified_only'})
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Discover</h1>
+            <p>Uncover Hidden Potential Through Assessment & Training</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Unlock Your Organization's True Potential</h2>
+                <p>
+                    Our Discover program provides comprehensive leadership and personality assessments that reveal hidden strengths, identify growth opportunities, and create a roadmap for excellence. Through data-driven insights and expert analysis, we help you understand your team's capabilities and develop targeted strategies for success.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Leadership Assessments
+                    </h3>
+                    <p>Comprehensive evaluation of leadership competencies, identifying strengths and development areas for current and emerging leaders.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                        Personality Profiling
+                    </h3>
+                    <p>In-depth personality assessments using validated tools to understand behavioral patterns, communication styles, and team dynamics.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        Strengths Analysis
+                    </h3>
+                    <p>Identify individual and team strengths to maximize performance and create complementary working relationships.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        360-Degree Feedback
+                    </h3>
+                    <p>Multi-source feedback systems that provide comprehensive insights from peers, supervisors, and team members.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        Custom Training Programs
+                    </h3>
+                    <p>Tailored leadership training programs based on assessment results, addressing specific organizational needs and goals.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        ROI Measurement
+                    </h3>
+                    <p>Track and measure the impact of development initiatives with clear metrics and performance indicators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Discovery Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Consultation</h3>
+                        <p>We begin with understanding your organization's unique challenges, goals, and culture to design the most effective assessment approach.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Assessment Design</h3>
+                        <p>Customized assessment tools are selected and configured based on your specific needs, ensuring relevant and actionable insights.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Data Collection</h3>
+                        <p>Comprehensive data gathering through various assessment methods including surveys, interviews, and behavioral observations.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Analysis & Insights</h3>
+                        <p>Expert analysis of assessment results to identify patterns, strengths, gaps, and opportunities for development.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Action Planning</h3>
+                        <p>Development of targeted action plans with clear objectives, timelines, and success metrics for implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="service-content">
+        <div class="container">
+            <h2 class="section-title">Benefits of Our Discover Program</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Identify high-potential employees for succession planning</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Improve team collaboration and communication</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Reduce turnover through better job-fit alignment</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Enhance leadership effectiveness across all levels</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Create personalized development plans for employees</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Build self-awareness and emotional intelligence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Discover Your Team's Potential?</h2>
+            <p>Let's uncover the insights that will transform your organization</p>
+            <a href="index.html#contact" class="btn btn-primary btn-large">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Discover your organization's true potential through our comprehensive assessment and training programs. Let's discuss how we can help you build stronger leaders and teams.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>coach@dareconsulting.group</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Philippines (Primary) | Global Reach</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dareconsult/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="discover" selected>Discover - Assessments & Training</option>
+                                <option value="actualize">Actualize - Strategic Planning</option>
+                                <option value="relate">Relate - Team Building</option>
+                                <option value="excel">Excel - Coaching & Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Get in Touch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 DARE Management Consultancy Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Redirect rules for Render static site
+
+# Force HTTPS
+http://dareconsulting.group/* https://www.dareconsulting.group/:splat 301!
+http://www.dareconsulting.group/* https://www.dareconsulting.group/:splat 301!
+
+# Redirect non-www to www
+https://dareconsulting.group/* https://www.dareconsulting.group/:splat 301!
+
+# Handle clean URLs (remove .html extension)
+/discover /discover.html 200
+/actualize /actualize.html 200
+/relate /relate.html 200
+/excel /excel.html 200
+/privacy /privacy.html 200
+/terms /terms.html 200
+
+# Fallback for 404
+/* /404.html 404

@@ -1,0 +1,19 @@
+{
+  "name": "dare-consulting-website",
+  "version": "1.0.0",
+  "description": "DARE Management Consultancy Services - Professional Website",
+  "scripts": {
+    "start": "echo 'This is a static website - no build required'",
+    "serve": "python3 -m http.server 8000 || python -m SimpleHTTPServer 8000"
+  },
+  "keywords": [
+    "consulting",
+    "management",
+    "training",
+    "philippines",
+    "dare"
+  ],
+  "author": "DARE Management Consultancy Services",
+  "license": "Proprietary",
+  "homepage": "https://www.dareconsulting.group"
+}

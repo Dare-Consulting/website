@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Executive coaching and life coaching services in the Philippines. DARE Consulting's Excel program develops exceptional leaders through one-on-one coaching, managers as coaches training, and HR consulting. Serving executives in Manila, Makati, BGC, and throughout Southeast Asia.">
+    <meta name="keywords" content="executive coaching Philippines, life coaching Manila, leadership coaching BGC, managers as coaches training, HR consulting Philippines, executive development Makati, leadership excellence, professional coaching Southeast Asia">
+    <title>Excel - Executive Coaching & Leadership Development Philippines | DARE Consulting</title>
+    <link rel="canonical" href="https://www.dareconsulting.group/excel.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dareconsulting.group/excel.html">
+    <meta property="og:title" content="Excel - Executive Coaching & Leadership Development Philippines | DARE Consulting">
+    <meta property="og:description" content="Elevate your leadership with expert executive coaching and life coaching services. One-on-one coaching for leaders in the Philippines and Southeast Asia.">
+    <meta property="og:image" content="https://www.dareconsulting.group/images/excel-og.jpg">
+    <meta property="og:site_name" content="DARE Management Consultancy Services">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dareconsulting.group/excel.html">
+    <meta property="twitter:title" content="Excel - Executive Coaching Philippines | DARE Consulting">
+    <meta property="twitter:description" content="Expert executive and life coaching for Philippine leaders. Achieve peak performance and leadership excellence.">
+    <meta property="twitter:image" content="https://www.dareconsulting.group/images/excel-twitter.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.9), rgba(243, 156, 18, 0.9)), 
+                        url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=1920&h=600&fit=crop&fp-y=0.35&auto=format&q=75');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .service-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-yellow);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            color: var(--secondary-yellow);
+        }
+        
+        .coaching-section {
+            background: var(--light-gray);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .coaching-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+        
+        .coaching-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .coaching-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .coaching-header {
+            background: linear-gradient(135deg, var(--secondary-yellow), var(--primary-orange));
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .coaching-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .coaching-body {
+            padding: 2rem;
+        }
+        
+        .coaching-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .coaching-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .coaching-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .coaching-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+        }
+        
+        .consulting-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            align-items: center;
+            margin: 60px 0;
+        }
+        
+        .consulting-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .consulting-content p {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .consulting-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .consulting-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .process-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .process-number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-yellow);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+        
+        .testimonial-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--secondary-yellow);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.5;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+        
+        .testimonial-author {
+            color: var(--text-light);
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-yellow) 0%, var(--primary-orange) 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .consulting-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .coaching-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Excel - Executive & Life Coaching",
+        "provider": {
+            "@type": "Organization",
+            "name": "DARE Management Consultancy Services",
+            "url": "https://www.dareconsulting.group",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "PH",
+                "addressRegion": "Metro Manila"
+            }
+        },
+        "description": "Executive coaching and leadership development programs to elevate performance, develop coaching capabilities, and achieve professional excellence.",
+        "areaServed": ["Philippines", "Manila", "Makati", "BGC", "Ortigas", "Alabang", "Cebu", "Southeast Asia"],
+        "serviceType": "Executive Coaching and Leadership Development",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Excel Services",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Executive Coaching",
+                    "description": "One-on-one coaching for senior leaders and executives"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Life Coaching",
+                    "description": "Personal development and life balance coaching"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Managers as Coaches Training",
+                    "description": "Develop coaching skills for managers and team leaders"
+                },
+                {
+                    "@type": "Service",
+                    "name": "HR Consulting",
+                    "description": "Strategic HR consulting and organizational development"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Performance Excellence Programs",
+                    "description": "Achieve peak performance through targeted development"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- PostHog Analytics -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_9ky4zAZoQtZ5pxA3z6Dy1qpzSfwqprCi37GhxrbzDBv',{api_host:'https://app.posthog.com', person_profiles: 'identified_only'})
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Excel</h1>
+            <p>Elevate Leadership and Achieve Peak Performance</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Unlock Excellence Through Expert Coaching & Consulting</h2>
+                <p>
+                    Our Excel program elevates individuals and organizations to their highest potential. Through personalized coaching, strategic consulting, and leadership development, we empower managers to become inspiring coaches, help executives reach new heights, and transform organizational capabilities for sustained excellence.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                        Managers as Coaches
+                    </h3>
+                    <p>Transform managers into effective coaches who inspire, develop, and empower their teams to achieve exceptional results.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Executive Coaching
+                    </h3>
+                    <p>One-on-one coaching for C-suite executives and senior leaders to navigate complex challenges and drive organizational success.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                        </svg>
+                        Life Coaching
+                    </h3>
+                    <p>Personal development coaching to achieve work-life balance, career transitions, and personal fulfillment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                        HR & OD Consulting
+                    </h3>
+                    <p>Strategic human resource and organizational development solutions to build high-performing cultures.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Virtual Assistant Consulting
+                    </h3>
+                    <p>Optimize virtual assistant operations for enhanced efficiency, quality, and client satisfaction.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        Performance Optimization
+                    </h3>
+                    <p>Data-driven approaches to measure, track, and improve individual and organizational performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaching Types Section -->
+    <section class="coaching-section">
+        <div class="container">
+            <h2 class="section-title">Our Coaching Programs</h2>
+            
+            <div class="coaching-types">
+                <div class="coaching-card">
+                    <div class="coaching-header">
+                        <h3>Executive Coaching</h3>
+                        <p>For Senior Leaders & C-Suite</p>
+                    </div>
+                    <div class="coaching-body">
+                        <p>Personalized coaching designed for executives facing complex leadership challenges:</p>
+                        <ul class="coaching-list">
+                            <li>Strategic decision-making</li>
+                            <li>Leadership presence & influence</li>
+                            <li>Stakeholder management</li>
+                            <li>Change leadership</li>
+                            <li>Succession planning</li>
+                            <li>Board relationships</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="coaching-card">
+                    <div class="coaching-header">
+                        <h3>Life & Career Coaching</h3>
+                        <p>For Personal Excellence</p>
+                    </div>
+                    <div class="coaching-body">
+                        <p>Holistic coaching for professionals seeking balance and fulfillment:</p>
+                        <ul class="coaching-list">
+                            <li>Career transitions & planning</li>
+                            <li>Work-life integration</li>
+                            <li>Personal goal achievement</li>
+                            <li>Confidence building</li>
+                            <li>Stress & time management</li>
+                            <li>Purpose discovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting Services Section -->
+    <section class="service-content">
+        <div class="container">
+            <h2 class="section-title">Specialized Consulting Services</h2>
+            
+            <div class="consulting-showcase">
+                <div class="consulting-content">
+                    <h3>HR & Organizational Development</h3>
+                    <p>
+                        Transform your organization with strategic HR and OD initiatives that align with business goals, enhance employee engagement, and foster a high-performance culture.
+                    </p>
+                    <p>Our expertise includes:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📊 Talent Management Strategies</li>
+                        <li style="padding: 0.5rem 0;">🎯 Performance Management Systems</li>
+                        <li style="padding: 0.5rem 0;">🔄 Change Management Programs</li>
+                        <li style="padding: 0.5rem 0;">💡 Employee Engagement Initiatives</li>
+                        <li style="padding: 0.5rem 0;">🏗️ Organizational Restructuring</li>
+                    </ul>
+                </div>
+                
+                <div class="consulting-image">
+                    <img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&h=400&fit=crop&fp-y=0.35&auto=format&q=75" alt="Asian professionals in HR consulting meeting" style="filter: grayscale(100%); transition: filter 0.5s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="consulting-showcase" style="margin-top: 4rem;">
+                <div class="consulting-image">
+                    <img src="https://images.unsplash.com/photo-1573496528816-a104a722b3db?w=600&h=400&fit=crop&fp-y=0.4&auto=format&q=75" alt="Southeast Asian virtual assistant team working" style="filter: grayscale(100%); transition: filter 0.5s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" loading="lazy">
+                </div>
+                
+                <div class="consulting-content">
+                    <h3>Virtual Assistant Agency Consulting</h3>
+                    <p>
+                        Elevate your VA agency operations with our specialized consulting services designed to optimize efficiency, scalability, and client satisfaction.
+                    </p>
+                    <p>We help VA agencies with:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">⚡ Operational Efficiency Enhancement</li>
+                        <li style="padding: 0.5rem 0;">✅ Quality Assurance Systems</li>
+                        <li style="padding: 0.5rem 0;">📚 VA Training & Development Programs</li>
+                        <li style="padding: 0.5rem 0;">🤝 Client Relationship Management</li>
+                        <li style="padding: 0.5rem 0;">📈 Performance Metrics & KPIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manager as Coach Section -->
+    <section class="coaching-section">
+        <div class="container">
+            <h2 class="section-title">Managers as Coaches Program</h2>
+            <p class="section-subtitle">Develop a coaching culture that drives performance</p>
+            
+            <div class="process-cards">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h4>Assessment</h4>
+                    <p>Evaluate current coaching capabilities</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h4>Training</h4>
+                    <p>Comprehensive coaching skills development</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h4>Practice</h4>
+                    <p>Real-world application with feedback</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h4>Certification</h4>
+                    <p>Recognition as certified coach-manager</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">5</div>
+                    <h4>Support</h4>
+                    <p>Ongoing mentoring and resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The executive coaching transformed my leadership approach. I now lead with greater clarity, confidence, and impact."
+                    </p>
+                    <p class="testimonial-author">- CEO, Financial Services</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Our managers became true coaches. Employee engagement scores increased by 40% within six months."
+                    </p>
+                    <p class="testimonial-author">- HR Director, Tech Company</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The VA consulting services helped us streamline operations and double our client base in one year."
+                    </p>
+                    <p class="testimonial-author">- VA Agency Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Excel?</h2>
+            <p>Elevate your leadership and achieve extraordinary results</p>
+            <a href="index.html#contact" class="btn btn-primary btn-large">Begin Your Excellence Journey</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Elevate your leadership potential through our executive coaching and development programs. Let's unlock peak performance for you and your team.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>coach@dareconsulting.group</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Philippines (Primary) | Global Reach</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dareconsult/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="discover">Discover - Assessments & Training</option>
+                                <option value="actualize">Actualize - Strategic Planning</option>
+                                <option value="relate">Relate - Team Building</option>
+                                <option value="excel" selected>Excel - Coaching & Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Get in Touch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 DARE Management Consultancy Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

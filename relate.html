@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build stronger teams with indoor and outdoor team building activities in the Philippines. DARE Consulting's Relate program enhances communication, collaboration, and customer service excellence for organizations in Manila, Makati, BGC, and across Southeast Asia.">
+    <meta name="keywords" content="team building Philippines, team building Manila, corporate team building BGC, communication skills training, presentation skills workshop, customer service training Philippines, cultural diversity training, team collaboration Southeast Asia">
+    <title>Relate - Team Building & Communication Training Philippines | DARE Consulting</title>
+    <link rel="canonical" href="https://www.dareconsulting.group/relate.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dareconsulting.group/relate.html">
+    <meta property="og:title" content="Relate - Team Building & Communication Training Philippines | DARE Consulting">
+    <meta property="og:description" content="Build stronger, more collaborative teams with expert team building and communication training programs. Indoor and outdoor activities for Philippine organizations.">
+    <meta property="og:image" content="https://www.dareconsulting.group/images/relate-og.jpg">
+    <meta property="og:site_name" content="DARE Management Consultancy Services">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dareconsulting.group/relate.html">
+    <meta property="twitter:title" content="Relate - Team Building Philippines | DARE Consulting">
+    <meta property="twitter:description" content="Expert team building and communication training for Philippine organizations. Build stronger, more effective teams.">
+    <meta property="twitter:image" content="https://www.dareconsulting.group/images/relate-twitter.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.9), rgba(46, 204, 113, 0.9)), 
+                        url('https://images.unsplash.com/photo-1515169067868-5387ec356754?w=1920&h=600&fit=crop&fp-y=0.4&auto=format&q=75');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .service-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-green);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            color: var(--secondary-green);
+        }
+        
+        .activities-section {
+            background: var(--light-gray);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .activities-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid var(--secondary-green);
+            border-radius: 50px;
+            color: var(--secondary-green);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active,
+        .tab-button:hover {
+            background: var(--secondary-green);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .activity-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .activity-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .skills-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            align-items: center;
+            margin: 60px 0;
+        }
+        
+        .skills-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .skills-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .skills-list li {
+            padding: 0.5rem 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        .skills-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-green);
+            font-weight: bold;
+        }
+        
+        .skills-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .skills-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .check-icon {
+            color: var(--secondary-green);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-green) 0%, #27AE60 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .skills-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Relate - Team Building & Communication Excellence",
+        "provider": {
+            "@type": "Organization",
+            "name": "DARE Management Consultancy Services",
+            "url": "https://www.dareconsulting.group",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "PH",
+                "addressRegion": "Metro Manila"
+            }
+        },
+        "description": "Team building and communication excellence programs to enhance collaboration, strengthen relationships, and improve organizational effectiveness.",
+        "areaServed": ["Philippines", "Manila", "Makati", "BGC", "Pasig", "Alabang", "Clark", "Southeast Asia"],
+        "serviceType": "Team Building and Communication Training",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Relate Services",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Indoor Team Building",
+                    "description": "Engaging indoor activities for team collaboration"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Outdoor Team Building",
+                    "description": "Adventure-based outdoor team challenges"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Communication & Presentation Skills",
+                    "description": "Enhance professional communication effectiveness"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Customer Service Excellence",
+                    "description": "Deliver exceptional customer experiences"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Cultural Diversity Training",
+                    "description": "Build inclusive and culturally aware teams"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- PostHog Analytics -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_9ky4zAZoQtZ5pxA3z6Dy1qpzSfwqprCi37GhxrbzDBv',{api_host:'https://app.posthog.com', person_profiles: 'identified_only'})
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Relate</h1>
+            <p>Build Stronger Teams Through Connection and Communication</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Foster Meaningful Connections That Drive Success</h2>
+                <p>
+                    Our Relate program strengthens the bonds that make great teams exceptional. Through dynamic team-building activities, communication workshops, and cultural development initiatives, we help organizations create environments where collaboration thrives, diversity is celebrated, and every team member feels valued and heard.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Team Building Programs
+                    </h3>
+                    <p>Customized indoor and outdoor activities designed to strengthen trust, improve collaboration, and boost team morale.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Communication Excellence
+                    </h3>
+                    <p>Master the art of effective communication with training in active listening, feedback delivery, and conflict resolution.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="13" x2="15" y2="13"></line>
+                            <line x1="9" y1="17" x2="9.01" y2="17"></line>
+                        </svg>
+                        Presentation Skills
+                    </h3>
+                    <p>Develop confidence and impact in public speaking, presentations, and professional communication scenarios.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        Customer Service Skills
+                    </h3>
+                    <p>Excellence in customer interaction, complaint handling, and creating memorable service experiences.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                            <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                        </svg>
+                        Cultural Diversity
+                    </h3>
+                    <p>Foster inclusive environments that celebrate diversity and leverage different perspectives for innovation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>
+                        <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        Emotional Intelligence
+                    </h3>
+                    <p>Develop self-awareness and empathy to build stronger professional relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Team Building Activities</h2>
+            
+            <div class="activities-tabs">
+                <button class="tab-button active" onclick="showTab('indoor')">Indoor Activities</button>
+                <button class="tab-button" onclick="showTab('outdoor')">Outdoor Activities</button>
+                <button class="tab-button" onclick="showTab('virtual')">Virtual Programs</button>
+            </div>
+            
+            <div id="indoor" class="tab-content active">
+                <div class="activity-grid">
+                    <div class="activity-item">
+                        <h4>Escape Room Challenges</h4>
+                        <p>Problem-solving adventures that require teamwork and creative thinking</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Innovation Workshops</h4>
+                        <p>Collaborative sessions to generate ideas and solutions</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Role-Playing Scenarios</h4>
+                        <p>Interactive exercises to improve empathy and understanding</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Team Cooking Classes</h4>
+                        <p>Fun culinary experiences that emphasize coordination</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Board Game Tournaments</h4>
+                        <p>Strategic games that build critical thinking</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Art & Creativity Sessions</h4>
+                        <p>Express team values through collaborative art projects</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="outdoor" class="tab-content">
+                <div class="activity-grid">
+                    <div class="activity-item">
+                        <h4>Adventure Courses</h4>
+                        <p>Physical challenges that build trust and support</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Sports Tournaments</h4>
+                        <p>Friendly competition to boost team spirit</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Treasure Hunts</h4>
+                        <p>Exciting quests requiring collaboration and strategy</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Beach Olympics</h4>
+                        <p>Fun beach activities promoting teamwork</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Nature Retreats</h4>
+                        <p>Reflective experiences in natural settings</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Community Service</h4>
+                        <p>Give back while building team bonds</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="virtual" class="tab-content">
+                <div class="activity-grid">
+                    <div class="activity-item">
+                        <h4>Online Escape Rooms</h4>
+                        <p>Digital puzzles for remote team collaboration</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Virtual Game Shows</h4>
+                        <p>Interactive quiz and trivia competitions</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Remote Workshops</h4>
+                        <p>Skill-building sessions via video conferencing</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Digital Scavenger Hunts</h4>
+                        <p>Online challenges across multiple platforms</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Virtual Coffee Breaks</h4>
+                        <p>Informal connection sessions for remote teams</p>
+                    </div>
+                    <div class="activity-item">
+                        <h4>Online Team Building</h4>
+                        <p>Structured activities for distributed teams</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Development Section -->
+    <section class="service-content">
+        <div class="container">
+            <h2 class="section-title">Communication & Presentation Skills</h2>
+            
+            <div class="skills-showcase">
+                <div class="skills-content">
+                    <h3>Master Professional Communication</h3>
+                    <p>Our comprehensive communication training equips your team with essential skills for professional success:</p>
+                    
+                    <ul class="skills-list">
+                        <li>Active listening and empathetic response</li>
+                        <li>Clear and concise message delivery</li>
+                        <li>Non-verbal communication mastery</li>
+                        <li>Cross-cultural communication</li>
+                        <li>Difficult conversation navigation</li>
+                        <li>Persuasion and influence techniques</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&fp-y=0.35&auto=format&q=75" alt="Asian team collaboration in modern office" style="filter: grayscale(100%); transition: filter 0.5s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" loading="lazy">
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--dark-gray);">Expected Outcomes:</h3>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Improved team collaboration and productivity</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Enhanced customer satisfaction scores</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Reduced workplace conflicts and misunderstandings</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Stronger professional relationships</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>More effective meetings and presentations</span>
+                </div>
+                <div class="benefit-item">
+                    <svg class="check-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Inclusive and respectful workplace culture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Build Stronger Connections Today</h2>
+            <p>Transform your team dynamics with our proven relationship-building programs</p>
+            <a href="index.html#contact" class="btn btn-primary btn-large">Start Building</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Build stronger, more collaborative teams through our proven team building and communication programs. Let's enhance your team's effectiveness together.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>coach@dareconsulting.group</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Philippines (Primary) | Global Reach</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dareconsult/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="discover">Discover - Assessments & Training</option>
+                                <option value="actualize">Actualize - Strategic Planning</option>
+                                <option value="relate" selected>Relate - Team Building</option>
+                                <option value="excel">Excel - Coaching & Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Get in Touch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DARE</span>
+                    <span class="logo-subtitle">Management Consultancy Services</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 DARE Management Consultancy Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
