@@ -1,7 +1,7 @@
 // Configuration
 const API_URL = window.location.hostname === 'localhost' 
     ? 'http://localhost:3000/api/send-email'
-    : 'https://dare-consulting-api.onrender.com/api/send-email'; // Update this with your actual API URL
+    : 'https://email-api-m118.onrender.com/api/send-email';
 
 // PostHog Event Tracking Helper
 function trackEvent(eventName, properties = {}) {
